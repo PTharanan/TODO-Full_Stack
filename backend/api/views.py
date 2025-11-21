@@ -13,3 +13,8 @@ class Data_API(APIView):
         data = Data(task_tit = request.data['task_tit'], tasks = request.data['tasks'])
         data.save()
         return Response("Sucessfully Saved!!!")
+
+    def delete(self, request, task_id):
+        data = Data.objects.get(id = task_id)
+        data.delete()
+        return Response("Sucessfully Deleted!!!")
