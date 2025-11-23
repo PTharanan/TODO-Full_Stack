@@ -18,3 +18,8 @@ class Data_API(APIView):
         data = Data.objects.get(id = task_id)
         data.delete()
         return Response("Sucessfully Deleted!!!")
+
+    def put(self, request, task_id):
+        data = Data.objects.filter(id = task_id)
+        data.update(task_tit = request.data['task_tit'], tasks = request.data['tasks'])
+        return Response("Sucessfully Updated!!!")
