@@ -1,39 +1,54 @@
-<div class="bg-sky-800 felx felx-col items-center justify-center h-screen w-screen">
-    <section>
-        <h1 class="">
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate] [animation-delay:0.15s]">T</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">U</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">D</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">O</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">
-            </span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">
-            </span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">A</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">A</span>
-            <span
-                class="relative font-sans text-white text-[15rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">P</span>
-            <span
-                class="relative font-sans text-white text-[rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">P</span>
-            <span
-                class="relative font-sans text-white text-[150rem ] top[20px] animate-[wiggle_0.4s_ease_infinite_alternate]">...</span>
-        </h1>
-    </section>
-    <section class="">
-        <div class="">
-            <input type="text" name="task" placeholder="Add your new task" />
-        </div>
-        <div class="">
-            <button type="submit">Add Task</button>
-        </div>
-    </section>
-    <section> </section>
-</div>
+<div class="bg-gray-100 min-h-screen flex justify-center p-6">
+
+  <div class="w-full max-w-xl">
+    
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">
+      My Tasks
+    </h1>
+
+    <!-- Input Section -->
+    <form class="flex gap-3 mb-6">
+      <input 
+        type="text"
+        placeholder="Add a new task..."
+        class="flex-1 px-4 py-3 rounded-lg border border-gray-300 
+               focus:border-blue-500 focus:ring-1 focus:ring-blue-500 
+               outline-none bg-white"
+      />
+      <button 
+        type="submit"
+        class="px-6 py-3 rounded-lg bg-blue-500 text-white font-semibold 
+               hover:bg-blue-600 transition">
+        Add
+      </button>
+    </form>
+
+    <!-- Task List -->
+    <ul class="flex flex-col gap-3">
+
+      <!-- Task -->
+      <li class="flex items-center gap-3 p-4 bg-white rounded-lg shadow">
+        <input type="checkbox" class="w-5 h-5 accent-blue-500" />
+        <span class="flex-1 text-gray-800">Sample Task 1</span>
+        <button class="px-3 py-1 bg-red-500 text-white text-sm rounded-md hover:bg-red-600">
+          Delete
+        </button>
+      </li>
+
+      <li class="flex items-center gap-3 p-4 bg-white rounded-lg shadow">
+        <input type="checkbox" class="w-5 h-5 accent-blue-500" />
+        <span class="flex-1 text-gray-800">Sample Task 2</span>
+        <button class="px-3 py-1 bg-red-500 text-white text-sm rounded-md hover:bg-red-600">
+          Delete
+        </button>
+      </li>
+
+    </ul>
+
+    <!-- Empty State -->
+    <p class="text-center text-gray-500 mt-10">
+      No tasks yet. Add one above!
+    </p>
+
+  </div></div>
